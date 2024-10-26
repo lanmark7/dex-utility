@@ -482,6 +482,24 @@ Below is a break down of the various DEX sentences that and their field element 
 | 01 | M TRANSMISSION CONTROL NUMBER (1) | N0 |
 | 02 | M NUMBER OF INCLUDED SETS (1) | N0 |
 
+### Appendix
+
+* M = Mandatory (must be transferred)
+* O = Optional (recommended element if manufacturer can support)
+* CM = Conditional Mandatory (required if the device or feature is present in vending system)
+
+MCM/OVMC = Mandatory if VMD is Coin Mech or Optional if VMD is VMC
+MCD/OVMC = Mandatory if VMD is Cashless Device or Optional if VMD is VMC
+MCG/OVMC = Mandatory if VMD is communication gateway or Optional if VMD is VMC
+
+The column "Block Identifier" also lists configuration elements (IC1, ...). The list shows the minimum requirement.
+
+* Note 1 – Refer chapter 5.1.7 (As from EVA-DTS version 6.1 the PA2 and LA elements shall be grandfathered as far as PA7 reporting is fully implemented. In markets where the price list feature is uncommon and rarely used, it is still allowed to use PA2. If cashless in combination with pricelists are used in the machines, PA7 must be implemented. It is also recommended to use PA7 for all new designs).
+* Note 2 – If motor / actuator / mechanism present or historical (since initialization) data is present.
+* Note 3 – An example of a 1 being sent would be if the motor/actuator/mechanism was present previously, and something occurred so that it is not being currently detected (i.e., removed, broken wire, etc.) It is not intended to indicate that a product is not available for vending (i.e., sold out). 
+* Note 4 - If the machine detects events, see section 2.8 for reporting details.
+* Note 5 – If cashless device supports User Groups.
+* Note 6 – Historically CA304 and CA308 have used two different formats. These formats are used in a wide installed base and must be maintained in existing and new designs for 5 years from the introduction of Version 6.0 (until 2009). After this date, new designs need only send CA309 andCA310. Check with equipment suppliers to verify their formatting
 
 # Competitors:
 
